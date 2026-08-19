@@ -1,0 +1,23 @@
+.section {
+  border-top: 1px solid var(--dark-rule);
+  padding: clamp(80px, 11vw, 130px) clamp(20px, 4.5vw, 34px) clamp(74px, 10vw, 120px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: clamp(24px, 5vw, 80px);
+  align-items: start;
+}
+
+.label {
+  font-size: 10.5px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--dark-text-tertiary);
+}
+
+.text {
+  font-family: var(--font-bodoni), serif;
+  font-weight: 400;
+  font-size: clamp(23px, 2.8vw, 44px);
+  line-height: 1.28;
+  text-wrap: pretty;
+}

@@ -1,0 +1,72 @@
+.section {
+  padding: clamp(74px, 10vw, 120px) 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0 clamp(20px, 4.5vw, 34px) clamp(26px, 5vw, 38px);
+}
+
+.title {
+  font-family: var(--font-bodoni), serif;
+  font-weight: 400;
+  font-size: clamp(27px, 3.2vw, 46px);
+}
+
+.link {
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--dark-text-tertiary);
+}
+
+.strip {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 clamp(20px, 4.5vw, 34px) 18px;
+  /* Barre discrète, accordée au fond sombre (le défaut clair jure avec la palette). */
+  scrollbar-width: thin;
+  scrollbar-color: var(--dark-rule-strong) transparent;
+}
+
+.tile {
+  position: relative;
+  flex: none;
+  aspect-ratio: 4 / 5;
+  width: min(74vw, 300px);
+  padding: 12px;
+  display: flex;
+  align-items: flex-end;
+}
+
+@media (min-width: 700px) {
+  .tile {
+    width: 260px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .tile {
+    width: 300px;
+  }
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.caption {
+  position: relative;
+  font-size: 11px;
+  color: var(--dark-text-tertiary);
+}

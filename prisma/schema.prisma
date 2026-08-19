@@ -1,0 +1,84 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+// Singleton row (id always 1) holding the editable page texts.
+model Texts {
+  // Valeurs par défaut portées par src/lib/content.ts (DEFAULT_TEXTS), écrites au seed.
+  id         Int    @id @default(1)
+  heroTitle  String @default("")
+  heroIntro  String @default("")
+  manifeste  String @default("")
+  bio           String  @default("")
+  citation      String  @default("")
+  portraitImage String?
+  contact       String  @default("")
+  updatedAt  DateTime @updatedAt
+}
+
+enum LookCategory {
+  Mariee
+  Soiree
+  Vestiaire
+  Accessoire
+}
+
+model Look {
+  id        String       @id @default(cuid())
+  name      String
+  category  LookCategory
+  year      String
+  note      String
+  image     String?
+  order     Int          @default(0)
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
+}
+
+model Post {
+  id        String   @id @default(cuid())
+  caption   String
+  image     String?
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Faq {
+  id        String   @id @default(cuid())
+  question  String
+  answer    String
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum AppointmentStatus {
+  Nouvelle
+  Traitee
+  Archivee
+}
+
+model Appointment {
+  id        String            @id @default(cuid())
+  name      String
+  contact   String
+  message   String
+  status    AppointmentStatus @default(Nouvelle)
+  createdAt DateTime          @default(now())
+}
+
+model AdminUser {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+}

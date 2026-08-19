@@ -1,0 +1,42 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 120;
+  mix-blend-mode: difference;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px 34px;
+}
+
+.header[data-compact] {
+  padding: 18px 20px;
+}
+
+.mark {
+  font-family: var(--font-bodoni), serif;
+  font-size: 15px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+}
+
+.header[data-compact] .mark {
+  font-size: 13px;
+}
+
+.rdvLink {
+  font-family: var(--font-archivo), sans-serif;
+  font-size: 10.5px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.rdvLink:hover {
+  color: #b9b2a4;
+}

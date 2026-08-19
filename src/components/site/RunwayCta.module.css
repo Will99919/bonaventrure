@@ -1,0 +1,43 @@
+.cta {
+  flex: none;
+  width: 34vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  text-align: center;
+}
+
+.cta.compact {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.text {
+  font-family: var(--font-bodoni), serif;
+  font-style: italic;
+  font-size: clamp(26px, 3.4vw, 52px);
+  line-height: 1.15;
+}
+
+.compact .text {
+  font-size: clamp(28px, 7vw, 44px);
+}
+
+.button {
+  border: 1px solid rgba(242, 239, 233, 0.45);
+  padding: 15px 24px;
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  transition: background 0.25s, color 0.25s;
+}
+
+.button:hover {
+  background: #f2efe9;
+  color: #0e0e0d;
+}

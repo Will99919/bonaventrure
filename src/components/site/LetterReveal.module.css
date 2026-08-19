@@ -1,0 +1,11 @@
+.letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.5em) rotate(3deg);
+  transition: opacity 0.9s var(--ease-reveal), transform 0.9s var(--ease-reveal);
+}
+
+.letter[data-in] {
+  opacity: 1;
+  transform: none;
+}

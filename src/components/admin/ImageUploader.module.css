@@ -1,0 +1,30 @@
+.overlay {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-align: center;
+  border: 1px dashed rgba(14, 14, 13, 0.3);
+  font-size: 12px;
+  color: var(--light-text-tertiary);
+  padding: 10px;
+}
+
+.overlay[data-has-image] {
+  background: rgba(242, 239, 233, 0.82);
+}
+
+.browse {
+  text-decoration: underline;
+  font-size: 11px;
+}
+
+.error {
+  color: var(--destructive);
+}
+
+.hiddenInput {
+  display: none;
+}

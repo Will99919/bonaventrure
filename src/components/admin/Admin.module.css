@@ -1,0 +1,365 @@
+.shell {
+  display: block;
+  min-height: 100vh;
+  background: var(--light-bg);
+  color: var(--light-text);
+}
+
+@media (min-width: 800px) {
+  .shell {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+  }
+}
+
+.sidebar {
+  border-bottom: 1px solid var(--light-rule-strong);
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 800px) {
+  .sidebar {
+    border-bottom: none;
+    border-right: 1px solid var(--light-rule-strong);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    padding: 26px 22px;
+    gap: 36px;
+  }
+}
+
+.brandBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.brand {
+  font-family: var(--font-bodoni), serif;
+  font-size: 15px;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+}
+
+.brandSub {
+  font-size: 9.5px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--light-text-tertiary);
+}
+
+.nav {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+}
+
+@media (min-width: 800px) {
+  .nav {
+    flex-direction: column;
+    gap: 4px;
+    overflow-x: visible;
+  }
+}
+
+.navItem {
+  flex: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  font-size: 11.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+}
+
+.navItem[data-active] {
+  background: #0e0e0d;
+  color: #f2efe9;
+}
+
+.navCount {
+  font-size: 10px;
+  color: var(--light-text-tertiary);
+}
+
+.navItem[data-active] .navCount {
+  color: #b9b2a4;
+}
+
+.footerBlock {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.saveStatus {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--light-text-tertiary);
+}
+
+.saveStatus[data-error] {
+  color: var(--destructive);
+}
+
+.linkButton {
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid rgba(14, 14, 13, 0.3);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.linkButton:hover {
+  background: #0e0e0d;
+  color: #f2efe9;
+}
+
+.signOutRow {
+  border-top: 1px solid var(--light-rule);
+  padding-top: 12px;
+}
+
+.signOut {
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--destructive);
+}
+
+.content {
+  padding: 30px 24px 80px;
+}
+
+@media (min-width: 800px) {
+  .content {
+    padding: 46px 60px 100px;
+  }
+}
+
+.pageTitle {
+  font-family: var(--font-bodoni), serif;
+  font-weight: 400;
+  font-size: clamp(28px, 3.4vw, 44px);
+  margin-bottom: 6px;
+}
+
+.pageHint {
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--light-text-tertiary);
+  margin-bottom: 36px;
+}
+
+.field {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--light-rule);
+}
+
+@media (min-width: 700px) {
+  .field {
+    grid-template-columns: 210px 1fr;
+  }
+}
+
+.fieldLabel {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.fieldHint {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--light-text-tertiary);
+}
+
+.textarea,
+.input,
+.select {
+  width: 100%;
+  font-family: var(--font-archivo), sans-serif;
+  font-size: 15px;
+  color: var(--light-text);
+  background: var(--field-bg);
+  border: 1px solid var(--light-rule-field);
+  padding: 10px 12px;
+  resize: vertical;
+}
+
+.underlineInput {
+  width: 100%;
+  font-family: var(--font-bodoni), serif;
+  font-size: 22px;
+  color: var(--light-text);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--light-rule-field);
+  padding: 4px 0;
+}
+
+.addButton {
+  background: #0e0e0d;
+  color: #f2efe9;
+  padding: 14px 22px;
+  font-size: 10.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  display: inline-block;
+}
+
+.cardsGrid {
+  display: grid;
+  gap: 18px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  border: 1px solid var(--light-rule-strong);
+  background: var(--field-bg);
+  padding: 18px;
+}
+
+@media (min-width: 900px) {
+  .card {
+    grid-template-columns: 190px 1fr auto;
+  }
+}
+
+.cardMedia {
+  height: 230px;
+}
+
+.portraitMedia {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 4 / 5;
+  height: auto;
+}
+
+.cardFields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cardSide {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (min-width: 900px) {
+  .cardSide {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.orderNumber {
+  font-family: var(--font-bodoni), serif;
+  font-size: 22px;
+  color: rgba(14, 14, 13, 0.35);
+}
+
+.orderButtons {
+  display: flex;
+  gap: 6px;
+}
+
+.orderButton {
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--light-rule-strong);
+}
+
+.deleteButton {
+  border: 1px solid var(--destructive);
+  color: var(--destructive);
+  padding: 8px 14px;
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s;
+}
+
+.deleteButton:hover {
+  background: var(--destructive);
+  color: #fff;
+}
+
+.emptyState {
+  border: 1px dashed rgba(14, 14, 13, 0.3);
+  padding: 46px;
+  text-align: center;
+  color: var(--light-text-tertiary);
+  font-size: 14px;
+}
+
+.journalGrid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.journalCard {
+  border: 1px solid var(--light-rule-strong);
+  background: var(--field-bg);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.journalMedia {
+  height: 250px;
+}
+
+.appointmentRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 18px;
+  border: 1px solid var(--light-rule-strong);
+  background: var(--field-bg);
+  margin-bottom: 12px;
+}
+
+@media (min-width: 700px) {
+  .appointmentRow {
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+  }
+}
+
+.appointmentName {
+  font-family: var(--font-bodoni), serif;
+  font-size: 18px;
+}
+
+.appointmentMeta {
+  font-size: 12px;
+  color: var(--light-text-tertiary);
+}

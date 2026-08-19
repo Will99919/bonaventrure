@@ -1,0 +1,88 @@
+:root {
+  --dark-bg: #0e0e0d;
+  --dark-text: #f2efe9;
+  --dark-text-secondary: #b9b2a4;
+  --dark-text-tertiary: #8d867a;
+  --dark-rule: rgba(242, 239, 233, 0.14);
+  --dark-rule-strong: rgba(242, 239, 233, 0.2);
+  --dark-rule-subtle: rgba(242, 239, 233, 0.16);
+
+  --light-bg: #f2efe9;
+  --light-text: #0e0e0d;
+  --light-text-secondary: #3d3a33;
+  --light-text-tertiary: #6f6a5f;
+  --light-rule: rgba(14, 14, 13, 0.14);
+  --light-rule-strong: rgba(14, 14, 13, 0.2);
+  --light-rule-field: rgba(14, 14, 13, 0.24);
+
+  --field-bg: #faf8f4;
+  --destructive: #a5432f;
+  --step-number: rgba(14, 14, 13, 0.16);
+
+  --ease-curtain: cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-reveal: cubic-bezier(0.16, 0.84, 0.24, 1);
+
+  --placeholder-a: repeating-linear-gradient(100deg, #1b1a17 0 18px, #141311 18px 36px);
+  --placeholder-b: repeating-linear-gradient(100deg, #191713 0 18px, #141311 18px 36px);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+/* `clip` et non `hidden` : `overflow-x: hidden` ferait de body un conteneur de
+   défilement, ce qui casserait le `position: sticky` du défilé et du protocole. */
+body {
+  overflow-x: clip;
+}
+
+body {
+  min-height: 100%;
+  color: var(--dark-text);
+  background: var(--dark-bg);
+  font-family: var(--font-archivo), Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p,
+figure {
+  font-weight: 400;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.bodoni {
+  font-family: var(--font-bodoni), "Times New Roman", serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

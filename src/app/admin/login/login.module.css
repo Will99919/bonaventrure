@@ -1,0 +1,74 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--light-bg);
+  color: var(--light-text);
+  padding: 20px;
+}
+
+.form {
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.brand {
+  font-family: var(--font-bodoni), serif;
+  font-size: 15px;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-bodoni), serif;
+  font-weight: 400;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--light-text-tertiary);
+}
+
+.field input {
+  font-family: var(--font-archivo), sans-serif;
+  font-size: 15px;
+  background: var(--field-bg);
+  border: 1px solid var(--light-rule-field);
+  padding: 12px 14px;
+  min-height: 44px;
+}
+
+.error {
+  color: var(--destructive);
+  font-size: 13px;
+}
+
+.submit {
+  min-height: 44px;
+  background: #0e0e0d;
+  color: #f2efe9;
+  padding: 14px;
+  font-size: 10.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.submit:disabled {
+  opacity: 0.6;
+}
